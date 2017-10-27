@@ -1,0 +1,81 @@
+﻿a.btn.btn-default.search {
+    background: #fe9126;
+    padding: 11px 12px 11px;
+    float: right;
+    outline: none;
+    border: none;
+}
+
+a.btn.btn-default.search:hover {
+    background: #333;
+}
+
+.pagination {
+    margin: 75px 0px 0px 0px;
+}
+
+.pagination > .btn {
+    font-weight: bold;
+    color: #000;
+    background: #fff;
+    border: 1px solid #ddd;
+}
+
+.pagination > a:hover {
+    color: #23527c;
+    background-color: #eee;
+    border-color: #ddd;
+}
+
+.pagination > .active {
+    color: #fff;
+    background-color: #ffc229;
+    border-color: #EDB62B;
+    box-shadow: none;
+    -o-box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+}
+
+#LabelMessage {
+    display: block;
+    font-weight: bold;
+    margin: 10px 0px;
+}
+
+.product_list_header {
+    margin-top: 10px;
+}
+
+#LinkButtonViewCart {
+    background: transparent;
+    border: none;
+}
+
+.cart_items .btn {
+    border: 1px solid gray;
+    margin: 0 !important;
+    padding: 4px 8px !important;
+}
+
+.cart_items i {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.cart_items .btn_update_quantity {
+    font-size: 12pt;
+}
+
+.cart_items .btn_remove_item {
+    font-size: 13pt;
+    padding: 3px 8px !important;
+}
+
+.cart_items .value input {
+    border: none;
+    background: transparent;
+    text-align: center;
+    width: 46px;
+    padding-left: 5px;
+}
