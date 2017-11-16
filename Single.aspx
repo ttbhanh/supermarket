@@ -1,9 +1,12 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/GuestMasterPage.Master" AutoEventWireup="true" CodeBehind="Single.aspx.cs" Inherits="_1685009.Single" %>
 
 <%@ Register Src="~/WebUC/NewOffers.ascx" TagPrefix="uc1" TagName="NewOffers" %>
-<%@ Register Src="~/WebUC/Product.ascx" TagPrefix="uc1" TagName="Product" %>
+<%@ Register Src="~/WebUC/Detail.ascx" TagPrefix="uc1" TagName="Detail" %>
+<%@ Register Src="~/WebUC/Reviews.ascx" TagPrefix="uc1" TagName="Reviews" %>
+
 
 <asp:Content ID="Content1" ContentPlaceHolderID="Head" runat="server">
+    <link href="css/reviews.css" rel="stylesheet" />
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <!-- breadcrumbs -->
@@ -17,7 +20,9 @@
     </div>
     <!-- //breadcrumbs -->
 
-    <uc1:Product runat="server" id="Product" />
+    <uc1:Detail runat="server" id="Detail" />
+
+    <uc1:Reviews runat="server" id="Reviews" />
 
     <uc1:NewOffers runat="server" ID="NewOffers" />
 </asp:Content>

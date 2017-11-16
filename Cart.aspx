@@ -35,8 +35,8 @@
                         <ItemTemplate>
                             <tr class="rem1">
                         <td class="invert"><%# Container.ItemIndex + 1 %></td>
-                        <td class="invert-image"><a href="Single.aspx">
-                            <asp:Image ID="ImageProduct" runat="server" ImageUrl='<%# "~/images/" + Eval("ImagePath") %>' alt=" " CssClass="img-responsive"/>
+                        <td class="invert-image">
+                            <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl='<%# "~/Single.aspx?Id=" + Eval("ProductId") %>'><asp:Image ID="ImageProduct" runat="server" ImageUrl='<%# "~/images/" + Eval("ImagePath") %>' alt=" " CssClass="img-responsive"/></asp:HyperLink>
                         </td>
                         <td class="invert"><asp:Label ID="LabelProductName" runat="server" Text='<%# Eval("Name") %>'></asp:Label></td>
                         <td class="invert">
@@ -87,7 +87,7 @@
             <div class="checkout-left">
                 <% if (canCheckout() == true) { %>
                     <div class="checkout-left-basket">
-                        <h4>Checkout</h4>
+                        <asp:Button ID="ButtonCheckout" runat="server" Text="Checkout" OnClick="ButtonCheckout_Click" CssClass="btn btn-primary" style="padding: 10px; width: 283px"/>
                         <ul>
                             <li>Total <span>$<asp:Label ID="LabelTotalCost" runat="server" Text=""></asp:Label></span></li>
                         </ul>

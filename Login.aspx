@@ -17,19 +17,44 @@
     <div class="login">
         <div class="container">
             <h2>Login Form</h2>
-
             <div class="login-form-grids animated wow slideInUp" data-wow-delay=".5s">
-                <form>
-                    <input type="email" placeholder="Email Address" required=" ">
-                    <input type="password" placeholder="Password" required=" ">
-                    <div class="forgot">
-                        <a href="#">Forgot Password?</a>
-                    </div>
-                    <input type="submit" value="Login">
-                </form>
+                <asp:LoginView ID="LoginView1" runat="server">
+                    <AnonymousTemplate>
+                        <asp:Login ID="LoginMember" runat="server" ClientIDMode="Static">
+                            <LayoutTemplate>           
+                                <asp:TextBox ID="UserName" runat="server" placeholder="Username" required=" "></asp:TextBox>
+                                <asp:RequiredFieldValidator ID="UserNameRequired" runat="server" ControlToValidate="UserName" ErrorMessage="User Name is required." ToolTip="User Name is required." ValidationGroup="Login1">*</asp:RequiredFieldValidator>
+             
+                                <asp:TextBox ID="Password" runat="server" TextMode="Password" placeholder="Password" required=" "></asp:TextBox>
+                                <asp:RequiredFieldValidator ID="PasswordRequired" runat="server" ControlToValidate="Password" ErrorMessage="Password is required." ToolTip="Password is required." ValidationGroup="Login1">*</asp:RequiredFieldValidator>
+                                            
+                                <asp:CheckBox ID="RememberMe" runat="server" Text="Remember me next time." />
+                        
+                                <div class="forgot">
+                                    <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/PasswordRecovery.aspx">Forgot Password?</asp:HyperLink>
+                                </div>
+
+                                <br />
+
+                                <div class="text-danger">
+                                    <asp:Literal ID="FailureText" runat="server" EnableViewState="False"></asp:Literal>
+                                </div>
+                                
+                                <asp:Button ID="LoginButton" runat="server" CommandName="Login" Text="Log In" ValidationGroup="Login1" />
+                            </LayoutTemplate>
+                        </asp:Login>
+
+                        <h4>For New People</h4>
+                        <p><a href="Register.aspx">Register Here</a> (Or) go back to <a href="Default.aspx">Home<span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span></a></p>
+                    </AnonymousTemplate>
+                    <LoggedInTemplate>
+                        <h4>Welcome <asp:LoginName ID="LoginName1" runat="server" /></h4>
+                        <p>
+                            You have logged in! Please click <a href="Default.aspx">Here</a> to go home.
+                        </p>
+                    </LoggedInTemplate>
+                </asp:LoginView>
             </div>
-            <h4>For New People</h4>
-            <p><a href="Register.aspx">Register Here</a> (Or) go back to <a href="Default.aspx">Home<span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span></a></p>
         </div>
     </div>
     <!-- //login -->

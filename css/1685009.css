@@ -79,3 +79,77 @@ a.btn.btn-default.search:hover {
     width: 46px;
     padding-left: 5px;
 }
+
+/* Navigation */
+.profile-usermenu li.active * {
+    background-color: #fe9126 !important;
+    color: white !important;
+}
+
+.profile-usermenu li:hover:not(.active) * {
+    background-color: #e6e6e6 !important;
+    color: black !important;
+}
+
+/* Dropdown menu User */
+#dropdown-menu-user button {
+    border: none !important;
+    background-color: #333;
+    color: white;
+}
+
+#dropdown-menu-user li {
+    display: block;
+}
+
+#dropdown-menu-user li a {
+    color: #333;
+}
+
+/* Register */
+#CreateUserWizardMember {
+    width: 100%;
+}
+
+/* Login */
+#LoginMember {
+    width: 100%;
+}
+
+/* Password Recovery */
+#PasswordRecoveryMember, #PasswordRecoveryMember table {
+    width: 100%;
+    text-align: center;
+}
+
+/* Sidebar menu User */
+.profile-usermenu a:hover, .profile-usermenu li:hover a {
+    color: #333;
+}
+
+.profile-userpic {
+    padding: 5px;
+}
+
+#LinkButtonUploadAvatar {
+    display: block;
+    margin-top: 10px;
+}
+
+/* Change Password */
+#ChangePasswordMember {
+    width: 100%;
+}
+
+#ChangePasswordMember .form-group {
+    margin-bottom: 10px;
+}
+
+/* User Address */
+#FormViewUserAddress {
+    width: 100%;
+}
+
+.action {
+    margin-top: 20px;
+}

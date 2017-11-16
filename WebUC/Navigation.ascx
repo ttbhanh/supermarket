@@ -15,7 +15,9 @@
             </div>
             <div class="collapse navbar-collapse" id="bs-megadropdown-tabs">
                 <ul class="nav navbar-nav">
-                    <li class="active"><a href="Default.aspx" class="act">Home</a></li>
+                    <li class="active">
+                        <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="~/Default.aspx" CssClass="act">Home</asp:HyperLink>
+                    </li>
 
                     <!-- Mega Menu -->
                     <asp:SqlDataSource ID="MainMenuDataSource" runat="server" ConnectionString='<%$ ConnectionStrings:ConnectionString %>' SelectCommand="SELECT [Id], [Name] FROM [Category] WHERE ([ParentId] IS NULL) ORDER BY [Order]"></asp:SqlDataSource>

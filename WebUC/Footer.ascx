@@ -69,7 +69,7 @@
             </ul>
         </div>
         <div class="payment-w3ls">
-            <img src="images/card.png" alt=" " class="img-responsive">
+            <img src="/images/card.png" alt=" " class="img-responsive">
         </div>
         <div class="clearfix"></div>
     </div>

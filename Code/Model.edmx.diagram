@@ -12,6 +12,18 @@
         <AssociationConnector Association="superMarketModel.FK_Product_ToBrand" ManuallyRouted="false" />
         <AssociationConnector Association="superMarketModel.FK_Category_ToCategory" ManuallyRouted="false" />
         <AssociationConnector Association="superMarketModel.FK_Product_ToCategory" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="superMarketModel.UserAddress" Width="1.5" PointX="5.375" PointY="3.75" />
+        <EntityTypeShape EntityType="superMarketModel.aspnet_Users" Width="1.5" PointX="3.125" PointY="5.625" />
+        <AssociationConnector Association="superMarketModel.FK_UserAddress_ToUser" />
+        <EntityTypeShape EntityType="superMarketModel.Review" Width="1.5" PointX="5.25" PointY="9.625" />
+        <AssociationConnector Association="superMarketModel.FK_Review_ToProduct" />
+        <EntityTypeShape EntityType="superMarketModel.Order" Width="1.5" PointX="8.375" PointY="5.75" />
+        <EntityTypeShape EntityType="superMarketModel.OrderDetail" Width="1.5" PointX="10.625" PointY="3.375" />
+        <EntityTypeShape EntityType="superMarketModel.OrderStatus" Width="1.5" PointX="6.125" PointY="7.25" />
+        <AssociationConnector Association="superMarketModel.FK_Order_ToUser" />
+        <AssociationConnector Association="superMarketModel.FK_Order_ToStatus" />
+        <AssociationConnector Association="superMarketModel.FK_OrderDetail_ToOrder" />
+        <AssociationConnector Association="superMarketModel.FK_OrderDetail_ToProduct" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
